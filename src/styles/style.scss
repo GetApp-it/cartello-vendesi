@@ -32,11 +32,14 @@ body {
 	font-size: 16px;
 	background-color: lightyellow;
 }
+.hidden {
+	display: none !important;
+}
 #wall {
 	min-height: 100vh;
 	display: flex;
-  align-items: center;
-  justify-content: center;
+	align-items: center;
+	justify-content: center;
 	position: relative;
 	background-color: blueviolet;
 	padding: 2%;
@@ -83,10 +86,10 @@ body {
 		padding: 0;
 		margin: 0;
 		li {
-		 list-style: none;
-		 margin: 8px 0;
-		 width: 100%;
-	 }
+			list-style: none;
+			margin: 8px 0;
+			width: 100%;
+		}
 	}
 	.btn {
 		display: block;
@@ -98,9 +101,9 @@ body {
 		background-color: rgba(137, 43, 226, 0.8);
 		padding: 16px;
 		border-radius: 16px;
-		transition: all .4s;
+		transition: all 0.4s;
 		&:hover {
-			background-color: #8a2be2;	
+			background-color: #8a2be2;
 		}
 	}
 }
