@@ -6,9 +6,11 @@ import * as QrCodeManager from './qr-code.js';
 import '../styles/style.scss';
 
 // load images
-import qrcodeImage from '../images/qr-code.png';
+import qrcodeImage from '../images/qr-code.jpg';
 import arrowImage from '../images/arrow.svg';
 import saleSignImage from '../images/sale-sign.svg';
+import introImage from '../images/intro-img.svg';
+import introImageQr from '../images/intro-img-qr.jpg';
 
 function bindEvents() {
   document.getElementById('btn-print').addEventListener('click', printMe);
