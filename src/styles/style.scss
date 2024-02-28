@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
-$small: 300px;
-$medium: 900px;
+$medium: 1279px;
+$small: 799px;
 
 @media print {
 	@page {
+		margin: 0mm 0mm 0mm 0mm;
 		size: landscape;
 	}
 	#intro, 
@@ -26,6 +27,12 @@ $medium: 900px;
 	}
 }
 
+::selection {
+	color: magenta;
+	background: black;
+	border-radius: 4px;
+}
+
 html,
 body {
 	margin: 0;
@@ -34,7 +41,7 @@ body {
 	height: 100%;
 	font-family: "Trebuchet MS", sans-serif;
 	font-size: 16px;
-	background-color: lightyellow;
+	background-color: #fefe21;
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory;
 }
@@ -45,7 +52,7 @@ hr {
 }
 .btn {
 	display: block;
-	width: 82%;
+	// width: 82%;
 	margin-top: 32px;
 	text-align: center;
 	color: white;
@@ -143,11 +150,11 @@ hr {
 #setting {
 	width: 320px;
 	margin: 0;
-	padding: 40px;
+	padding: 20px 40px;
 	background-color: #fff;
 	border-radius: 8px;
 	@media screen and (max-width: $medium) {
-		padding: 20px;
+		padding: 10px 20px;
 		margin-bottom: 20px;
 	}
 	h1 {
@@ -160,7 +167,7 @@ hr {
 		font-weight: lighter;
 		color: white;
 	}
-	h3 {
+	h4 {
 		margin: 20px 0 0 0;
 		// letter-spacing: 1px;
 		&.qr-code {
@@ -206,6 +213,14 @@ hr {
 	height: 595px;
 	margin: 0 auto;
 	@media screen and (max-width: $medium) {
+		position: sticky;
+		top: 40px;
+		zoom: .7;
+		margin: 40px;
+	}
+	@media screen and (max-width: $small) {
+		position: sticky;
+		top: 40px;
 		zoom: .4;
 		margin: 40px;
 	}
