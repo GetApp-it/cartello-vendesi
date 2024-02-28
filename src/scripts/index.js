@@ -14,6 +14,7 @@ import introImageQr from '../images/intro-img-qr.jpg';
 
 function bindEvents() {
   document.getElementById('btn-print').addEventListener('click', printMe);
+  document.getElementById('btn-print-ex').addEventListener('click', printMe);
 
   const saleSignElements = [
     'name',

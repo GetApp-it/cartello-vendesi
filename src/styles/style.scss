@@ -107,7 +107,32 @@ hr {
 		padding: 6px 0;
 	}
 	.btn {
+		border: solid 2px magenta;
 		background: magenta;
+		display: inline-block;
+		width: 50%;
+		@media screen and (max-width: $medium) {
+			width: 88%;
+		}
+		&:hover {
+			border: solid 2px white;
+			background: white;
+			color: black;
+		}
+		&.btn-print-ex {
+			width: 30%;
+			color: magenta;
+			border: solid 2px magenta;
+			background: transparent;
+			@media screen and (max-width: $medium) {
+				width: 88%;
+			}
+				&:hover {
+				background: white;
+				border: solid 2px white;
+				color: black;
+			}
+		}
 	}
 	img {
 		@media screen and (max-width: $medium) {
