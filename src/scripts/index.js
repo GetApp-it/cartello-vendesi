@@ -6,6 +6,8 @@ import * as QrCodeManager from './qr-code.js';
 import '../styles/style.scss';
 
 // load images
+import faviconImage from '../images/favicon.png';
+import shareImage from '../images/share.jpg';
 import qrcodeImage from '../images/qr-code.jpg';
 import arrowImage from '../images/arrow.svg';
 import saleSignImage from '../images/sale-sign.svg';
