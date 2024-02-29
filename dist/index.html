@@ -59,10 +59,10 @@
         <span id="surname-show">Gargo</span>
         <span id="tel-show">333 12 34 567</span>
       </div>
-      <canvas id="qrcode"></canvas>
-      <!-- <div id="qrcode">
+      <canvas id="qrcode" class="qrcode hidden"></canvas>
+      <div id="qrcode-placeholder" class="qrcode">
         <img src="images/qr-code.jpg" alt="Qr-code" />
-    </div> -->
+      </div>
       <img src="images/sale-sign.svg" alt="Cartello" />
     </div>
 
@@ -95,19 +95,21 @@
 
       <h4 class="qr-code">Nascondi qr-code</h4>
       <label class="switch">
-        <input type="checkbox">
+        <input id="qrcode-switcher" type="checkbox">
         <span class="slider round"></span>
       </label>
 
-      <h4>Indirizzo per qr-code</h4>
-      <ul>
-        <li>
-          <span>Via</span> <input type="text" id="via" placeholder="Piazza Piola 13" />
-        </li>
-        <li>
-          <span>Città</span> <input type="text" id="citta" placeholder="Milano" />
-        </li>
-      </ul>
+      <div id="qrcode-elements">
+        <h4>Indirizzo per qr-code</h4>
+        <ul>
+          <li>
+            <span>Via</span> <input type="text" id="qrcode-elements-street" placeholder="Piazza Piola 13" />
+          </li>
+          <li>
+            <span>Città</span> <input type="text" id="qrcode-elements-city" placeholder="Milano" />
+          </li>
+        </ul>
+      </div>
       <div>
         <a id="btn-print" class="btn" href="#">🖨️ STAMPA</a>
       </div>
