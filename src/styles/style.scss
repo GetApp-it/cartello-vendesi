@@ -251,6 +251,20 @@ hr {
 			height: 100%;
 		}
 	}
+	&.no-qr {
+		.sale-sign {
+			display: none;
+		}
+		#qrcode-placeholder {
+			display: none;
+		}
+		.sale-sign-no-qrc {
+			display: block;
+		}
+	}
+	.sale-sign-no-qrc {
+		display: none;
+	}
 }
 
 /* The switch - the box around the slider */
