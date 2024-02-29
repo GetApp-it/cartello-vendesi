@@ -14,6 +14,7 @@ import saleSignImage from '../images/sale-sign.svg';
 import introImage from '../images/intro-img.svg';
 import introImageQr from '../images/intro-img-qr.jpg';
 
+
 function bindEvents() {
   document.getElementById('btn-print').addEventListener('click', printMe);
   document.getElementById('btn-print-ex').addEventListener('click', printMe);
