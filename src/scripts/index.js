@@ -14,12 +14,39 @@ import saleSignImage from '../images/sale-sign.svg';
 import introImage from '../images/intro-img.svg';
 import introImageQr from '../images/intro-img-qr.jpg';
 
+function onQrCodeSwitcherChange(event) {
+  const qrcodeElements = document.getElementById('qrcode-elements');
+  const saleSign = document.getElementById('cartello');
+  if (event.target.checked) {
+    qrcodeElements.classList.add('hidden');
+    saleSign.classList.add('no-qr');
+  } else {
+    qrcodeElements.classList.remove('hidden');
+    saleSign.classList.remove('no-qr');
+  }
+}
+
+function createQrCode(qrcodeElementSelectors) {
+  const vCard = QrCodeManager.createVCard(qrcodeElementSelectors);
+  const qrcode = document.getElementById('qrcode');
+  const qrcodePlaceholder = document.getElementById('qrcode-placeholder');
+
+  if (!vCard) {
+    qrcodePlaceholder.classList.remove('hidden');
+    qrcode.classList.add('hidden');
+  } else {
+    qrcodePlaceholder.classList.add('hidden');
+    qrcode.classList.remove('hidden');
+
+    QrCodeManager.createQrCode(qrcode, vCard);
+  }
+}
 
 function bindEvents() {
   document.getElementById('btn-print').addEventListener('click', printMe);
   document.getElementById('btn-print-ex').addEventListener('click', printMe);
 
-  const saleSignElements = [
+  const saleSignElementSelectors = [
     'name',
     'surname',
     'tel',
@@ -27,10 +54,32 @@ function bindEvents() {
     'desc2',
     'desc3',
   ];
-  saleSignElements.forEach((element) => {
+  saleSignElementSelectors.forEach((element) => {
     document.getElementById(element).addEventListener('keyup', function () {
       document.getElementById(`${element}-show`).innerHTML = this.value;
     });
+  });
+
+  // Show/Hide qrcode
+  document
+    .getElementById('qrcode-switcher')
+    .addEventListener('change', onQrCodeSwitcherChange);
+
+  const qrcodeElementSelectors = {
+    streetSelector: 'qrcode-elements-street',
+    citySelector: 'qrcode-elements-city',
+    nameSelector: 'name',
+    surnameSelector: 'surname',
+    telSelector: 'tel',
+  };
+
+  Object.entries(qrcodeElementSelectors).forEach(([, selector]) => {
+    document.getElementById(selector).addEventListener(
+      'keyup',
+      _.debounce(function (event) {
+        createQrCode(qrcodeElementSelectors);
+      }, 300)
+    );
   });
 }
 
@@ -42,29 +91,7 @@ function init() {
 
   // binding
   bindEvents();
-
-  // Create Default QRCode
-  QrCodeManager.createQrCode(document.getElementById('qrcode'));
 }
-
-// $('#nome').keyup(function () {
-//   $('#nome-show').text($(this).val());
-// });
-// $('#cognome').keyup(function () {
-//   $('#cognome-show').text($(this).val());
-// });
-// $('#tel').keyup(function () {
-//   $('#tel-show').text($(this).val());
-// });
-// $('#desc1').keyup(function () {
-//   $('#desc1-show').text($(this).val());
-// });
-// $('#desc2').keyup(function () {
-//   $('#desc2-show').text($(this).val());
-// });
-// $('#desc3').keyup(function () {
-//   $('#desc3-show').text($(this).val());
-// });
 
 window.onload = init;
 
