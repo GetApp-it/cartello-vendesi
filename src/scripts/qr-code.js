@@ -1,5 +1,10 @@
 import QRCode from 'qrcode';
 
+/**
+ * ref: https://datatracker.ietf.org/doc/html/rfc6350
+ * @param {*} param0
+ * @returns
+ */
 function createVCard({
   streetSelector,
   citySelector,

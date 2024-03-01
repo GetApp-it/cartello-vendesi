@@ -11,9 +11,10 @@ import shareImage from '../images/share.jpg';
 import qrcodeImage from '../images/qr-code.jpg';
 import arrowImage from '../images/arrow.svg';
 import saleSignImage from '../images/sale-sign.svg';
-import saleSignImageNoQrc from '../images/sale-sign-no-qrc.svg';
+import saleSignNoQrcImage from '../images/sale-sign-no-qrc.svg';
 import introImage from '../images/intro-img.svg';
-import introImageQr from '../images/intro-img-qr.jpg';
+import introQrImage from '../images/intro-img-qr.jpg';
+import favicon from '../images/favicon.ico';
 
 function onQrCodeSwitcherChange(event) {
   const qrcodeElements = document.getElementById('qrcode-elements');
