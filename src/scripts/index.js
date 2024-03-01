@@ -14,7 +14,7 @@ import saleSignImage from '../images/sale-sign.svg';
 import saleSignNoQrcImage from '../images/sale-sign-no-qrc.svg';
 import introImage from '../images/intro-img.svg';
 import introQrImage from '../images/intro-img-qr.jpg';
-import favicon from '../images/favicon.ico';
+import favicong from '../images/favicon.ico';
 
 function onQrCodeSwitcherChange(event) {
   const qrcodeElements = document.getElementById('qrcode-elements');
@@ -37,10 +37,10 @@ function createQrCode(qrcodeElementSelectors) {
     qrcodePlaceholder.classList.remove('hidden');
     qrcode.classList.add('hidden');
   } else {
+    QrCodeManager.createQrCode(qrcode, vCard);
+    console.log('QrCodeManager.createQrCode');
     qrcodePlaceholder.classList.add('hidden');
     qrcode.classList.remove('hidden');
-
-    QrCodeManager.createQrCode(qrcode, vCard);
   }
 }
 
@@ -73,6 +73,9 @@ function bindEvents() {
     nameSelector: 'name',
     surnameSelector: 'surname',
     telSelector: 'tel',
+    desc1Selector: 'desc1',
+    desc2Selector: 'desc2',
+    desc3Selector: 'desc3',
   };
 
   Object.entries(qrcodeElementSelectors).forEach(([, selector]) => {
