@@ -30,6 +30,8 @@ function onQrCodeSwitcherChange(event) {
 
 function createQrCode(qrcodeElementSelectors) {
   const vCard = QrCodeManager.createVCard(qrcodeElementSelectors);
+  console.log('vCard', vCard);
+
   const qrcode = document.getElementById('qrcode');
   const qrcodePlaceholder = document.getElementById('qrcode-placeholder');
 

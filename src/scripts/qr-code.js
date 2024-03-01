@@ -42,6 +42,7 @@ VERSION:3.0
 FN: {full_name}
 TEL;TYPE=HOME,VOICE: {telephone}
 ADR;TYPE=HOME:;;{street};{city};
+PHOTO;TYPE=JPEG;VALUE=URI:https://upload.wikimedia.org/wikipedia/commons/8/87/My_Dog_%2861220578%29.jpeg
 NOTE:{desc1}
   {desc2}
   {desc3}
