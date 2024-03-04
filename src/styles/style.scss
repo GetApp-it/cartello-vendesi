@@ -267,10 +267,7 @@ hr {
 		}
 	}
 	&.no-qr {
-		.sale-sign {
-			display: none;
-		}
-		#qrcode-placeholder {
+		.sale-sign, #qrcode-placeholder, #qrcode {
 			display: none;
 		}
 		.sale-sign-no-qrc {
