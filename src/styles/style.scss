@@ -45,10 +45,17 @@ body {
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory;
 }
+a {
+	color: magenta;
+}
 hr {
 	margin: 40px 0;
 	border: none;
 	border-bottom: solid 1px #ff00ff;
+}
+.small {
+	font-size: smaller;
+	margin: 8px 0;
 }
 .btn {
 	display: block;
