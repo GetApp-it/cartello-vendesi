@@ -11,4 +11,6 @@ Da usare come annuncio per la vendita di proprietà (es. casa, macchina...).
 
 ### [••• Visita il sito •••](https://getapp-it.github.io/cartello-vendesi/)
 
-[![Cartello Vendesi](https://getapp-it.github.io/cartello-vendesi/images/intro-img.svg 'Cartello Vendesi')](https://getapp-it.github.io/cartello-vendesi/)
+[![Cartello Vendesi](https://getapp-it.github.io/cartello-vendesi/images/share.jpg 'Cartello Vendesi')](https://getapp-it.github.io/cartello-vendesi/)
+
+<!-- [![Cartello Vendesi](https://getapp-it.github.io/cartello-vendesi/images/intro-img.svg 'Cartello Vendesi')](https://getapp-it.github.io/cartello-vendesi/) -->
