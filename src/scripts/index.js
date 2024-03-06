@@ -20,11 +20,11 @@ function onQrCodeSwitcherChange(event) {
   const qrcodeElements = document.getElementById('qrcode-elements');
   const saleSign = document.getElementById('cartello');
   if (event.target.checked) {
-    qrcodeElements.classList.add('hidden');
-    saleSign.classList.add('no-qr');
-  } else {
     qrcodeElements.classList.remove('hidden');
     saleSign.classList.remove('no-qr');
+  } else {
+    qrcodeElements.classList.add('hidden');
+    saleSign.classList.add('no-qr');
   }
 }
 
