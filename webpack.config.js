@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: './src/scripts/index.js',
     print: './src/scripts/print.js',
+    qrcode: './src/scripts/qr-code.js',
   },
   output: {
     filename: '[name].bundle.js',

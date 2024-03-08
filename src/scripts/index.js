@@ -75,9 +75,6 @@ function bindEvents() {
     nameSelector: 'name',
     surnameSelector: 'surname',
     telSelector: 'tel',
-    desc1Selector: 'desc1',
-    desc2Selector: 'desc2',
-    desc3Selector: 'desc3',
   };
 
   Object.entries(qrcodeElementSelectors).forEach(([, selector]) => {
