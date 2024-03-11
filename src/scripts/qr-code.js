@@ -32,6 +32,7 @@ function createVCard({
 VERSION:3.0
 FN: {full_name}
 TEL;TYPE=HOME,VOICE: {telephone}
+ADR;:;;{street};{city}
 REV: ${new Date().toISOString()}
 END:VCARD`
     .replace(/{full_name}/gi, `${name.value} ${surname.value}`.trim())
