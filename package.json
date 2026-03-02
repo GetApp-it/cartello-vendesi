@@ -24,7 +24,7 @@
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "qrcode": "^1.5.3"
   }
 }
